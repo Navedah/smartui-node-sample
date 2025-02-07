@@ -40,5 +40,8 @@ jobs:
           echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
           cd sdk
           npm i
+          export PROJECT_TOKEN=1324700#1665bcd0-bb7b-4a76-b9a7-87eed2cc2448#Sample121
+          npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+          npx smartui config:create .smartui.json
           npx smartui exec node sdkCloud.js
 
