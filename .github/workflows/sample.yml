@@ -38,3 +38,7 @@ jobs:
           GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
           echo "GITHUB_URL: $GITHUB_URL"
           echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
+          cd sdk
+          npm i
+          npx smartui exec node sdkCloud.js
+
