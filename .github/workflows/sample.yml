@@ -6,6 +6,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+env:
+  LT_USERNAME: ${{ secrets.LT_USERNAME }}
+  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
 
 jobs:
   run-smartui-test:
@@ -41,9 +44,7 @@ jobs:
           cd sdk
           npm i
           export PROJECT_TOKEN=1324700#1665bcd0-bb7b-4a76-b9a7-87eed2cc2448#Sample121
-env:
-  LT_USERNAME: ${{ secrets.LT_USERNAME }}
-  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+
           npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
           npx smartui config:create .smartui.json
           npx smartui exec node sdkCloud.js
