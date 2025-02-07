@@ -19,6 +19,12 @@ let capabilities = {
     build: "<BUILD_NAME", // name of the build
     visual: true,
   },
+  github: {
+    
+    "url": process.env.GITHUB_URL  // Mandatory
+    //Github URL format-https://api.github.com/repos/OWNER/REPO/statuses/commitId
+    
+   }
 };
 
 (async function example() {
